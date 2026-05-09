@@ -1,0 +1,156 @@
+📌 City ID Mapping (reference)
+ID	City
+0	Lahore
+1	Islamabad
+2	Faisalabad
+3	Multan
+4	Sialkot
+5	Gujranwala
+6	Peshawar
+7	Rawalpindi
+8	Abbottabad
+9	Bahawalpur
+10	Sukkur
+11	Hyderabad
+12	Karachi
+13	Quetta
+14	Zhob
+15	Mansehra
+________________________________________
+🧾 TABLE 1: cityID — cityID — distance (km)
+City1 ID	City2 ID	Distance
+0	1	375
+0	2	180
+0	3	340
+0	4	130
+0	5	75
+1	6	180
+1	7	15
+1	8	125
+2	3	240
+2	5	170
+3	9	100
+3	10	470
+9	10	520
+10	11	330
+11	12	160
+12	13	690
+13	14	330
+14	6	390
+6	8	175
+7	0	375
+5	4	55
+4	1	230
+12	10	555
+13	3	640
+9	0	430
+11	3	710
+6	0	520
+8	15	25
+15	1	155
+7	6	170
+________________________________________
+🛣️ TABLE 2: cityID — cityID — path_name
+City1 ID	City2 ID	Path
+0	1	N5
+0	2	M3
+0	3	M4
+0	4	N5
+0	5	N5
+1	6	M1
+1	7	N5
+1	8	N35
+2	3	M4
+2	5	N5
+3	9	N5
+3	10	N5
+9	10	N5
+10	11	N5
+11	12	M9
+12	13	N25
+13	14	N50
+14	6	N50
+6	8	N35
+7	0	M2
+5	4	N5
+4	1	M11
+12	10	M5
+13	3	N70
+9	0	N5
+11	3	N5
+6	0	M1
+8	15	N35
+15	1	N35
+7	6	M1
+
+
+
+
+
+
+🧾 TABLE 3: city1 — city2 — distance (km)
+City 1	City 2	Distance
+Lahore	Islamabad	375
+Lahore	Faisalabad	180
+Lahore	Multan	340
+Lahore	Sialkot	130
+Lahore	Gujranwala	75
+Islamabad	Peshawar	180
+Islamabad	Rawalpindi	15
+Islamabad	Abbottabad	125
+Faisalabad	Multan	240
+Faisalabad	Gujranwala	170
+Multan	Bahawalpur	100
+Multan	Sukkur	470
+Bahawalpur	Sukkur	520
+Sukkur	Hyderabad	330
+Hyderabad	Karachi	160
+Karachi	Quetta	690
+Quetta	Zhob	330
+Zhob	Peshawar	390
+Peshawar	Abbottabad	175
+Rawalpindi	Lahore	375
+Gujranwala	Sialkot	55
+Sialkot	Islamabad	230
+Karachi	Sukkur	555
+Quetta	Multan	640
+Bahawalpur	Lahore	430
+Hyderabad	Multan	710
+Peshawar	Lahore	520
+Abbottabad	Mansehra	25
+Mansehra	Islamabad	155
+Rawalpindi	Peshawar	170
+________________________________________
+🛣️ TABLE 4: city1 — city2 — path_name
+City 1	City 2	Path
+Lahore	Islamabad	N5
+Lahore	Faisalabad	M3
+Lahore	Multan	M4
+Lahore	Sialkot	N5
+Lahore	Gujranwala	N5
+Islamabad	Peshawar	M1
+Islamabad	Rawalpindi	N5
+Islamabad	Abbottabad	N35
+Faisalabad	Multan	M4
+Faisalabad	Gujranwala	N5
+Multan	Bahawalpur	N5
+Multan	Sukkur	N5
+Bahawalpur	Sukkur	N5
+Sukkur	Hyderabad	N5
+Hyderabad	Karachi	M9
+Karachi	Quetta	N25
+Quetta	Zhob	N50
+Zhob	Peshawar	N50
+Peshawar	Abbottabad	N35
+Rawalpindi	Lahore	M2
+Gujranwala	Sialkot	N5
+Sialkot	Islamabad	M11
+Karachi	Sukkur	M5
+Quetta	Multan	N70
+Bahawalpur	Lahore	N5
+Hyderabad	Multan	N5
+Peshawar	Lahore	M1
+Abbottabad	Mansehra	N35
+Mansehra	Islamabad	N35
+Rawalpindi	Peshawar	M1
+

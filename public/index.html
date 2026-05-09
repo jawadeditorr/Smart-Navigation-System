@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Navigation System - Pakistan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar controls -->
+        <aside class="glass-panel sidebar">
+            <div class="brand">
+                <div class="header-top">
+                    <h1>SmartNav</h1>
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                </div>
+                <p>Pakistan Routing System</p>
+            </div>
+
+            <div class="controls">
+                <div class="input-group">
+                    <label for="src">Start Location</label>
+                    <select id="src"></select>
+                </div>
+
+                <div class="input-group">
+                    <label for="dest">Destination</label>
+                    <select id="dest"></select>
+                </div>
+
+                <button id="navigate-btn" class="primary-btn">
+                    <span>Find Shortest Path</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </div>
+
+            <div class="results-panel" id="results-panel">
+                <h3 id="distance-display">Distance: -- km</h3>
+                <div class="path-container">
+                    <ul id="path-list" class="path-list">
+                        <!-- Path nodes will be populated here -->
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Calculating Optimal Route...</p>
+            </div>
+            <div class="error-msg" id="error-msg"></div>
+        </aside>
+
+        <!-- Map area -->
+        <main class="map-container">
+            <div class="map-wrapper" id="map-wrapper">
+                <img src="pakistan.svg" alt="Map of Pakistan" class="map-image" />
+                <!-- SVG lines for edges -->
+                <svg id="edges-svg" width="100%" height="100%" viewBox="0 0 700 700" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="var(--primary)" />
+                            <stop offset="100%" stop-color="var(--accent)" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g id="base-edges"></g>
+                    <g id="active-edges"></g>
+                </svg>
+                <!-- Nodes container -->
+                <div id="nodes-container"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
