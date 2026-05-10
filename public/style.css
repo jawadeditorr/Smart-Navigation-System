@@ -456,8 +456,8 @@ body.dark-theme .map-image {
 }
 
 .node-dot {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     background-color: var(--node-color);
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
@@ -473,12 +473,12 @@ body.dark-theme .map-image {
 
 .node-label {
     position: absolute;
-    top: 20px;
-    font-size: 12px;
+    top: 15px;
+    font-size: 11px;
     font-weight: 600;
     color: var(--text-main);
     background: var(--panel-bg);
-    padding: 2px 6px;
+    padding: 1px 4px;
     border-radius: 4px;
     white-space: nowrap;
     pointer-events: none;
